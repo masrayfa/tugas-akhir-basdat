@@ -13,8 +13,7 @@ id_hewan serial,
 jenis_hewan VARCHAR(50) NOT NULL,
 umur INT NOT NULL,
 penyakit VARCHAR(50),
-CONSTRAINT hewan_id_PK PRIMARY KEY(id_hewan),
-CONSTRAINT nik_pemilik_FK FOREIGN KEY(id_hewan) REFERENCES pemilik(nik));
+CONSTRAINT hewan_id_PK PRIMARY KEY(id_hewan));
 
 CREATE TABLE petugas(
 id_petugas serial PRIMARY KEY,

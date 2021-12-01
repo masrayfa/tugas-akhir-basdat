@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../functions/config.php";
 
 if(isset($_POST['submit'])) {
   $nik = $_POST['nik'];
@@ -19,9 +19,9 @@ if(isset($_POST['submit'])) {
   $hewan_result = pg_query($db, $hewan_insert_query);
   
   if($pemilik_result && $hewan_insert_query) {
-    echo "Insert query berhasil";    
+    header("Location: ../functions/read_data_penitipan.php");
   } else {
-    echo "Insert query gagal";
+    header('Location: home.php?');  
   }
 }
   
@@ -78,6 +78,9 @@ if(isset($_POST['submit'])) {
           <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="penyakit">
         </div>
         <button type="submit" name= "submit" class="btn btn-primary">Submit</button>        
+      </form>
+      <form method="post" action="home.php">
+        <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to home</button>
       </form>
     </div>
 

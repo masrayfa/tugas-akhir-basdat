@@ -1,7 +1,7 @@
 <?php include("config.php"); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang= "en">
 <head>
     <title> Data Penitipan Hewan </title>
 </head>
@@ -39,4 +39,6 @@
     </table>
 </body>
 </html>
+
+
 

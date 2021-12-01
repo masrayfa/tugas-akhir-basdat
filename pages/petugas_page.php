@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../functions/config.php";
 
 if(isset($_POST['submit'])) {  
   $nama = $_POST['nama'];
@@ -55,6 +55,10 @@ if(isset($_POST['submit'])) {
           <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="alamat">
         </div>        
         <button type="submit" name= "submit" class="btn btn-primary">Submit</button>        
+      </form>
+      </form>
+      <form method="post" action="home.php">
+        <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to home</button>
       </form>
     </div>
 
