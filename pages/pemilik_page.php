@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
   $pemilik_result = pg_query($db, $pemilik_insert_query);
   $hewan_result = pg_query($db, $hewan_insert_query);
   
-  if($result && $hewan_insert_query) {
+  if($pemilik_result && $hewan_insert_query) {
     echo "Insert query berhasil";    
   } else {
     echo "Insert query gagal";

@@ -19,6 +19,9 @@
       <form method="post">
         <button type="submit" name= "submit" class="btn btn-primary my-3"><a href="petugas_page.php" class='text-light'>Petugas</button>
       </form>
+      <form method="post">
+        <button type="submit" name= "submit" class="btn btn-primary my-3"><a href="read_data_penitipan.php" class='text-light'>Data Penitipan</button>
+      </form>
     </div>
   </body>
 </html>

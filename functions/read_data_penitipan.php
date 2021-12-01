@@ -18,14 +18,14 @@
     <table border = "1">
     <thead>
         <tr>
-            <th>No</th>
-            <th>Tanggal Penerimaan</th>
-            <th>Tanggal Pengembalian</th>
-            <th>Biaya Penitipan</th>
-            <th>ID Hewan</th>
-            <th>NIK Pemilik</th>
-            <th>ID Petugas</th>
-            <th>Tindakan</th>
+            <th id= 'no'>No</th>
+            <th id = 'tanggal_penerimaan'>Tanggal Penerimaan</th>
+            <th id = 'tanggal_pengembalian'>Tanggal Pengembalian</th>
+            <th id = 'biaya'>Biaya Penitipan</th>
+            <th id = 'id_hewan'>ID Hewan</th>
+            <th id = 'nik'>NIK Pemilik</th>
+            <th id = 'id_petugas'>ID Petugas</th>
+            <th id = 'tindakan'>Tindakan</th>
         </tr>
     </thead>
     <tbody>
