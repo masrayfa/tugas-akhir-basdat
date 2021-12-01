@@ -1,18 +1,13 @@
-<?php include("config.php"); ?>
+<?php include("config.php");?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Data Penitipan Hewan </title>
+    <title> Halaman Admin</title>
 </head>
 
 <body>
     <h3>Daftar Penitipan Hewan</h3>
-
-
-    <nav>
-        <a href="create_page.php">[+] Daftar </a>
-    </nav>
 
     <br>
     <table border = "1">
@@ -31,12 +26,26 @@
     <tbody>
 
         <?php
-        $query = pg_query("SELECT * FROM data_penitipan");
+        $data_result = pg_query("SELECT * FROM data_penitipan");
 
-        echo "PROSES!"
+        while($data_penitipan = pg_fetch_array($data_result)){
+            echo "<tr>";
+
+			echo "<td>".$data_penitipan['id']."</td>";
+			echo "<td>".$data_penitipan['tanggal_penerimaan']."</td>";
+			echo "<td>".$data_penitipan['tanggal_pengembalian']."</td>";
+			echo "<td>".$data_penitipan['biaya_penitipan']."</td>";
+			echo "<td>".$data_penitipan['id_hewan']."</td>";
+            echo "<td>".$data_penitipan['nik_pemilik']."</td>";
+			echo "<td>".$data_penitipan['id_petugas']."</td>";
+			           
+            echo "</tr>";
+        }
         ?>
     </tbody>
     </table>
 </body>
 </html>
+
+?>
 
