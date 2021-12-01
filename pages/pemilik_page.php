@@ -14,14 +14,18 @@ if(isset($_POST['submit'])) {
 
   $pemilik_insert_query = "INSERT INTO pemilik(nik, nama, no_telepon, alamat, email) VALUES('$nik', '$nama', '$no_telepon', '$alamat', '$email')";
   $hewan_insert_query = "INSERT INTO hewan(jenis_hewan, umur, penyakit) VALUES('$jenis_hewan', '$umur', '$penyakit')";
+
+  
   
   $pemilik_result = pg_query($db, $pemilik_insert_query);
   $hewan_result = pg_query($db, $hewan_insert_query);
+ 
+  
   
   if($pemilik_result && $hewan_result) {
-    echo "Insert query berhasil";    
+    header('Location: read_data_penitipan.php?');  
   } else {
-    echo "Insert query gagal";
+    header('Location: read_data_penitipan.php?');  
   }
 }
   
