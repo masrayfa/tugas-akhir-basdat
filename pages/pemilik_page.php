@@ -7,18 +7,19 @@ if(isset($_POST['submit'])) {
   $no_telepon = $_POST['telepon'];
   $alamat = $_POST['alamat'];
   $email = $_POST['email'];
-  $jenis_hewan = $_POST['jenis_hewan'];
-  $penyakit = $_POST['penyakit'];
-  $umur = $_POST['umur'];
+  $biaya = $_POST['biaya'];
+  $id_petugas = $_POST['id_petugas'];  
+  $waktu_pengembalian = $_POST['waktu_pengembalian'];
 
 
-  $pemilik_insert_query = "INSERT INTO pemilik(nik, nama, no_telepon, alamat, email) VALUES('$nik', '$nama', '$no_telepon', '$alamat', '$email')";
-  $hewan_insert_query = "INSERT INTO hewan(jenis_hewan, umur, penyakit) VALUES('$jenis_hewan', '$umur', '$penyakit')";
+  $pemilik_insert_query = "INSERT INTO pemilik(nik, nama, no_telepon, alamat, email) VALUES('$nik', '$nama', '$no_telepon', '$alamat', '$email')";  
+  $data_penitipan_insert_query = "INSERT INTO data_penitipan(waktu_pengembalian, biaya_penitipan, nik_pemilik, id_petugas) VALUES('$waktu_pengembalian', '$biaya', '$nik', '$id_petugas')";
   
-  $pemilik_result = pg_query($db, $pemilik_insert_query);
-  $hewan_result = pg_query($db, $hewan_insert_query);
+  $pemilik_result = pg_query($db, $pemilik_insert_query);  
+  $data_penitipan_result = pg_query($db, $data_penitipan_insert_query);
+
   
-  if($pemilik_result && $hewan_insert_query) {
+  if($pemilik_result && $data_penitipan_result) {
     header("Location: ../functions/read_data_penitipan.php");
   } else {
     header('Location: home.php?');  
@@ -66,16 +67,16 @@ if(isset($_POST['submit'])) {
           <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="alamat">
         </div>
         <div class="mb-3">
-          <label> Jenis Hewan </label>
-          <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="jenis_hewan">
+          <label> Biaya Penitipan </label>
+          <input type="text" class="form-control" placeholder="Biaya" name="biaya">
+        </div>        
+        <div class="mb-3">
+          <label> Waktu Pengembalian </label>
+          <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="waktu_pengembalian">
         </div>
         <div class="mb-3">
-          <label> Umur Hewan </label>
-          <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="umur">
-        </div>
-        <div class="mb-3">
-          <label> Riwayat Penyakit </label>
-          <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="penyakit">
+          <label> Id Petugas </label>
+          <input type="text" class="form-control" placeholder="Id Petugas" name="id_petugas">
         </div>
         <button type="submit" name= "submit" class="btn btn-primary">Submit</button>        
       </form>

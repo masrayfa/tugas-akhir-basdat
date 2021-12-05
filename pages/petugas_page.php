@@ -12,7 +12,7 @@ if(isset($_POST['submit'])) {
   $result = pg_query($db, $insert_query);
   
   if($result) {
-    echo "Insert query berhasil";    
+    header('Location: home.php?');
   } else {
     echo "Insert query gagal";
   }
