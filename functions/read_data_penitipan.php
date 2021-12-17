@@ -44,8 +44,8 @@
                     <td><?= $data['nik_pemilik'] ?></td>
                     <td><?= $data['id_petugas'] ?></td>
                     <td>
-                        <a href="hapussiwa.php?id=<?= $siswa['id'] ?>">delete</a>
-                        <a href="formedit.php?id=<?=$siswa['id']?>">edit</a>
+                    <a href="hapusdata.php?id=<?=$data['nik_pemilik']?>">delete</a>
+                    <a href="formedit.php?id=<?=$data['nik_pemilik']?>">edit</a>
                     </td
                     
 

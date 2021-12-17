@@ -1,9 +1,6 @@
 CREATE DATABASE penitipan_hewan;
 
 CREATE TABLE hewan(
-CREATE DATABASE penitipan_hewan;
-
-CREATE TABLE hewan(
 id_hewan serial,
 jenis_hewan VARCHAR(50) NOT NULL,
 umur INT NOT NULL,
