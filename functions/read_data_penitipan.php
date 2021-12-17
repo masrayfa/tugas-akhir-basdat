@@ -34,23 +34,23 @@
         $query = pg_query("SELECT waktu_penerimaan,waktu_pengembalian,biaya_penitipan,pemilik.id_hewan,nik_pemilik,id_petugas FROM pemilik,data_penitipan WHERE pemilik.nik=data_penitipan.nik_pemilik");
 
         $no = 1;
-			while ($data = pg_fetch_array($query)) { ?>
-				<tr>
-					<td><?= $no++ ?></td>
-					<td><?= $data['waktu_penerimaan'] ?></td>
-					<td><?= $data['waktu_pengembalian'] ?></td>
-					<td><?= $data['biaya_penitipan'] ?></td>
-					<td><?= $data['id_hewan'] ?></td>
-					<td><?= $data['nik_pemilik'] ?></td>
+            while ($data = pg_fetch_array($query)) { ?>
+                <tr>
+                    <td><?= $no++ ?></td>
+                    <td><?= $data['waktu_penerimaan'] ?></td>
+                    <td><?= $data['waktu_pengembalian'] ?></td>
+                    <td><?= $data['biaya_penitipan'] ?></td>
+                    <td><?= $data['id_hewan'] ?></td>
+                    <td><?= $data['nik_pemilik'] ?></td>
                     <td><?= $data['id_petugas'] ?></td>
-					<td>
+                    <td>
                         <a href="hapussiwa.php?id=<?= $siswa['id'] ?>">delete</a>
-						<a href="formedit.php?id=<?=$siswa['id']?>">edit</a>
-					</td
-					
-	
-				</tr>
-		<?php } ?>
+                        <a href="formedit.php?id=<?=$siswa['id']?>">edit</a>
+                    </td
+                    
+
+                </tr>
+        <?php } ?>
     </tbody>
     </table>
 </body>
