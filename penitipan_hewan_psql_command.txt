@@ -30,7 +30,7 @@ waktu_pengembalian DATE,
 biaya_penitipan INT,
 nik_pemilik VARCHAR(16),
 id_petugas INT,
-CONSTRAINT nik_pemilik_FK FOREIGN KEY(nik_pemilik) REFERENCES pemilik(nik),
+CONSTRAINT nik_pemilik_FK FOREIGN KEY(nik_pemilik) REFERENCES pemilik(nik) ON DELETE CASCADE,
 CONSTRAINT id_petugas_FK FOREIGN KEY(id_petugas) REFERENCES petugas(id_petugas));
 
 
