@@ -39,11 +39,11 @@ if (isset($_GET['id'])) {
             <label> Riwayat Penyakit </label>
             <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="penyakit" value="<?= $data_hewan['penyakit']?>">
           </div>
-          <button type="edit" name= "edit" class="btn btn-primary">edit</button>    
+          <button type="edit" name= "edit" class="btn btn-primary">Edit</button>    
         </fieldset>       
       </form>
-      <form method="post" action="home.php">
-        <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to home</button>
+      <form method="post" action="../functions/read_data_penitipan.php">
+        <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to List</button>
       </form>
     </div>
 
