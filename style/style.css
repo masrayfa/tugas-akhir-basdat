@@ -6,17 +6,19 @@
 .styled-table {
     border-collapse: collapse;
     padding: 10px;
-    max-width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     font-size: 13px;
-    min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    font-family: "Helvetica";
+    font-family: "Verdana";
     align-content: center;
     
 }
 
+a {
+    text-decoration: none;
+}
 .styled-table thead tr {
     background-color: #0281f8;
     color: #ffffff;
