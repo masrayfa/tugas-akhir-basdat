@@ -13,6 +13,10 @@
         <a href="../pages/hewan_page.php">[+] Daftar </a>
     </nav>
 
+    <nav>
+        <a href="../pages/home.php">Back to Home </a>
+    </nav>
+
     <br>
     <table class="styled-table">
     <thead>
@@ -24,7 +28,9 @@
             <th>ID Hewan</th>
             <th>NIK Pemilik</th>
             <th>ID Petugas</th>
-            <th>Tindakan</th>
+            <th>Edit Data Pemilik</th>
+            <th>Edit Data Hewan</th>
+            <th>Hapus Data</th>
         </tr>
     </thead>
     <tbody>
@@ -43,14 +49,12 @@
                     <td><?= $data['id_hewan'] ?></td>
                     <td><?= $data['nik_pemilik'] ?></td>
                     <td><?= $data['id_petugas'] ?></td>
-                    <td>
-                    <a href="hapusdata.php?id=<?=$data['id_hewan']?>">delete</a>
-                    <a href="../pages/hewan_page_edit.php?id=<?=$data['id_hewan']?>">edit</a>
-                    </td>
+                    <td><a href="../pages/pemilik_page_edit.php?id=<?=$data['nik_pemilik']?>">Edit</a></td>
+                    <td><a href="../pages/hewan_page_edit.php?id=<?=$data['id_hewan']?>">Edit</a></td>
+                    <td><a href="hapusdata.php?id=<?=$data['id_hewan']?>">Hapus</a></td>
                 </tr>
         <?php } ?>
     </tbody>
     </table>
 </body>
 </html>
-
