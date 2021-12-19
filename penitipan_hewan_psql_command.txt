@@ -15,7 +15,7 @@ alamat VARCHAR(101) NOT NULL,
 email VARCHAR(20) NOT NULL,
 id_hewan serial,
 CONSTRAINT NIK_PK PRIMARY KEY(NIK),
-CONSTRAINT id_hewan_FK FOREIGN KEY(id_hewan) REFERENCES hewan(id_hewan));
+CONSTRAINT id_hewan_FK FOREIGN KEY(id_hewan) REFERENCES hewan(id_hewan) ON DELETE CASCADE);
 
 CREATE TABLE petugas(
 id_petugas serial PRIMARY KEY,
