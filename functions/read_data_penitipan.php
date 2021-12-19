@@ -14,7 +14,7 @@
     </nav>
 
     <br>
-    <table class="styled-table">
+    <table class="styled-tabled">
     <thead>
         <tr>
             <th>No</th>
@@ -46,7 +46,7 @@
                     <td>
                     <a href="hapusdata.php?id=<?=$data['id_hewan']?>">delete</a>
                     <a href="formedit.php?id=<?=$data['nik_pemilik']?>">edit</a>
-            </td>
+                    </td>
                 </tr>
         <?php } ?>
     </tbody>
