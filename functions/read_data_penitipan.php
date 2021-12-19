@@ -14,7 +14,7 @@
     </nav>
 
     <br>
-    <table class="styled-tabled">
+    <table class="styled-table">
     <thead>
         <tr>
             <th>No</th>
