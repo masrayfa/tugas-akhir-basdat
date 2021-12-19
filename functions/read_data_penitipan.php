@@ -4,18 +4,17 @@
 <html lang= "en">
 <head>
     <title> Data Penitipan Hewan </title>
+    <link rel="stylesheet" href="../style/style.css"> 
 </head>
 
 <body>
-    <h3>Daftar Penitipan Hewan</h3>
-
-
+    <h3 class="header3">DATA PENITIPAN HEWAN</h3>
     <nav>
         <a href="../pages/hewan_page.php">[+] Daftar </a>
     </nav>
 
     <br>
-    <table border = "1">
+    <table class="styled-table">
     <thead>
         <tr>
             <th>No</th>
@@ -31,7 +30,8 @@
     <tbody>
 
         <?php
-        $query = pg_query("SELECT waktu_penerimaan,waktu_pengembalian,biaya_penitipan,pemilik.id_hewan,nik_pemilik,id_petugas FROM pemilik,data_penitipan WHERE pemilik.nik=data_penitipan.nik_pemilik");
+        $query = pg_query("SELECT waktu_penerimaan,waktu_pengembalian,biaya_penitipan,pemilik.id_hewan,nik_pemilik,id_petugas 
+                            FROM pemilik,data_penitipan WHERE pemilik.nik=data_penitipan.nik_pemilik");
 
         $no = 1;
             while ($data = pg_fetch_array($query)) { ?>
@@ -46,9 +46,7 @@
                     <td>
                     <a href="hapusdata.php?id=<?=$data['id_hewan']?>">delete</a>
                     <a href="formedit.php?id=<?=$data['nik_pemilik']?>">edit</a>
-                    </td
-                    
-
+            </td>
                 </tr>
         <?php } ?>
     </tbody>
