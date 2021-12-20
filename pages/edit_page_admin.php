@@ -51,10 +51,5 @@ if (isset($_GET['id'])) {
         <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to List</button>
       </form>
     </div>
-
-    
-
-    
-    
   </body>
 </html>
