@@ -15,7 +15,7 @@ alamat VARCHAR(101) NOT NULL,
 email VARCHAR(20) NOT NULL,
 id_hewan serial,
 CONSTRAINT NIK_PK PRIMARY KEY(NIK),
-CONSTRAINT id_hewan_FK FOREIGN KEY(id_hewan) REFERENCES hewan(id_hewan));
+CONSTRAINT id_hewan_FK FOREIGN KEY(id_hewan) REFERENCES hewan(id_hewan) ON DELETE CASCADE);
 
 CREATE TABLE petugas(
 id_petugas serial PRIMARY KEY,
@@ -25,13 +25,17 @@ alamat VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL);
 
 CREATE TABLE data_penitipan(
-waktu_penerimaan DATE NOT NULL DEFAULT CURRENT_DATE,
-waktu_pengembalian DATE NOT NULL,
-biaya_penitipan INT NOT NULL,
-nik_pemilik VARCHAR(16) NOT NULL,
-id_petugas INT NOT NULL,
-CONSTRAINT nik_pemilik_FK FOREIGN KEY(nik_pemilik) REFERENCES pemilik(nik),
+waktu_penerimaan DATE NULL,
+waktu_pengembalian DATE NULL,
+biaya_penitipan INT NULL,
+nik_pemilik VARCHAR(16),
+id_petugas INT NULL,
+CONSTRAINT nik_pemilik_FK FOREIGN KEY(nik_pemilik) REFERENCES pemilik(nik) ON DELETE CASCADE ON UPDATE CASCADE,
 CONSTRAINT id_petugas_FK FOREIGN KEY(id_petugas) REFERENCES petugas(id_petugas));
 
-data_penitipan.id_hewan
 
+#Opsional buat delete isi tabel#
+DROP TABLE IF EXISTS data_penitipan;
+DROP TABLE IF EXISTS pemilik;
+DROP TABLE IF EXISTS hewan;
+DROP TABLE IF EXISTS petugas;
