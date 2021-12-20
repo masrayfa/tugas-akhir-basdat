@@ -19,7 +19,7 @@
     <div class="container my-5">
     <h1>Selamat Datang di Form Penitipan Hewan</h1>
       <form method="post">
-        <button type="submit" name= "submit" class="btn btn-primary my-3"><a href="hewan_page.php" class='text-light'>Input Hewan</button>
+        <button type="submit" name= "submit" class="btn btn-primary my-3"><a href="hewan_page.php" class='text-light'>Pemilik & Hewan Peliharaan</button>
       </form>
       <form method="post">
         <button type="submit" name= "submit" class="btn btn-primary my-3"><a href="petugas_page.php" class='text-light'>Petugas</button>
