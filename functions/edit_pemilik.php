@@ -9,18 +9,15 @@ if(isset($_POST['edit'])) {
     $no_telepon = $_POST['telepon'];
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
-    $biaya = $_POST['biaya'];
-    $id_petugas = $_POST['id_petugas'];  
-    $waktu_pengembalian = $_POST['waktu_pengembalian'];
+    $waktu_penerimaan = $_POST['waktu_penerimaan'];
 
-    $data_penitipan_edit_query = "UPDATE data_penitipan SET waktu_pengembalian = '$waktu_pengembalian', biaya_penitipan = '$biaya', id_petugas='$id_petugas' WHERE nik_pemilik = '$id'";
+    $data_penitipan_edit_query = "UPDATE data_penitipan SET waktu_penerimaan = '$waktu_penerimaan' WHERE nik_pemilik = '$id'";
 
     $data_penitipan_edit = pg_query($db, $data_penitipan_edit_query);
     
     $pemilik_edit_query = "UPDATE pemilik SET nik = '$nik', nama = '$nama', no_telepon = '$no_telepon', alamat='$alamat', email='$email' WHERE nik = '$id'";
     
     $pemilik_edit = pg_query($db, $pemilik_edit_query);
-    
     
     
     if($pemilik_edit && $data_penitipan_edit) {
