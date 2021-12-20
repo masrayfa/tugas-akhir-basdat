@@ -47,18 +47,10 @@ if (isset($_GET['id'])) {
         <div class="mb-3">
           <label> Alamat </label>
           <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="alamat" value="<?= $data_pemilik['alamat']?>">
-        </div>
+        </div>      
         <div class="mb-3">
-          <label> Biaya Penitipan </label>
-          <input type="text" class="form-control" placeholder="Biaya" name="biaya" value="<?= $data_pemilik['biaya_penitipan']?>">
-        </div>        
-        <div class="mb-3">
-          <label> Waktu Pengembalian </label>
-          <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="waktu_pengembalian" value="<?= $data_pemilik['waktu_pengembalian']?>">
-        </div>
-        <div class="mb-3">
-          <label> Id Petugas </label>
-          <input type="text" class="form-control" placeholder="Id Petugas" name="id_petugas" value="<?= $data_pemilik['id_petugas']?>">
+          <label> Waktu Penerimaan </label>
+          <input type="date" class="form-control" placeholder="yyyy-mm-dd" name="waktu_penerimaan" value="<?= $data_pemilik['waktu_penerimaan']?>">
         </div>
         <button type="edit" name= "edit" class="btn btn-primary">Edit</button>        
       </form>
@@ -66,10 +58,5 @@ if (isset($_GET['id'])) {
         <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to List</button>
       </form>
     </div>
-
-    
-
-    
-    
   </body>
 </html>
