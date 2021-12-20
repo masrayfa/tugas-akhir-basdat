@@ -7,13 +7,12 @@ if(isset($_POST['submit'])) {
   $no_telepon = $_POST['telepon'];
   $alamat = $_POST['alamat'];
   $email = $_POST['email'];
-  $biaya = $_POST['biaya'];
-  $id_petugas = $_POST['id_petugas'];  
+  $waktu_penerimaan = $_POST['waktu_penerimaan'];
   $waktu_pengembalian = $_POST['waktu_pengembalian'];
 
 
   $pemilik_insert_query = "INSERT INTO pemilik(nik, nama, no_telepon, alamat, email) VALUES('$nik', '$nama', '$no_telepon', '$alamat', '$email')";  
-  $data_penitipan_insert_query = "INSERT INTO data_penitipan(waktu_pengembalian, biaya_penitipan, nik_pemilik, id_petugas) VALUES('$waktu_pengembalian', '$biaya', '$nik', '$id_petugas')";
+  $data_penitipan_insert_query = "INSERT INTO data_penitipan(waktu_penerimaan,waktu_pengembalian, nik_pemilik) VALUES('$waktu_penerimaan','$waktu_pengembalian ','$nik')";
   
   $pemilik_result = pg_query($db, $pemilik_insert_query);  
   $data_penitipan_result = pg_query($db, $data_penitipan_insert_query);
@@ -27,7 +26,6 @@ if(isset($_POST['submit'])) {
 }
   
 ?>
-
 
 
 
@@ -65,18 +63,14 @@ if(isset($_POST['submit'])) {
         <div class="mb-3">
           <label> Alamat </label>
           <input type="text" class="form-control" placeholder="Masukkan Alamat Anda" name="alamat">
+        </div>      
+        <div class="mb-3">
+          <label> Tanggal Penerimaan </label>
+          <input type="date" class="form-control" placeholder="yyyy-mm-dd" name="waktu_penerimaan">
         </div>
         <div class="mb-3">
-          <label> Biaya Penitipan </label>
-          <input type="text" class="form-control" placeholder="Biaya" name="biaya">
-        </div>        
-        <div class="mb-3">
-          <label> Waktu Pengembalian </label>
-          <input type="text" class="form-control" placeholder="yyyy-mm-dd" name="waktu_pengembalian">
-        </div>
-        <div class="mb-3">
-          <label> Id Petugas </label>
-          <input type="text" class="form-control" placeholder="Id Petugas" name="id_petugas">
+          <label> Tanggal Pengembalian </label>
+          <input type="date" class="form-control" placeholder="yyyy-mm-dd" name="waktu_pengembalian">
         </div>
         <button type="submit" name= "submit" class="btn btn-primary">Submit</button>        
       </form>
@@ -84,10 +78,5 @@ if(isset($_POST['submit'])) {
         <button type="submit" name= "submit" class="btn btn-secondary my-3">Back to home</button>
       </form>
     </div>
-
-    
-
-    
-    
   </body>
 </html>
