@@ -10,9 +10,8 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 13px;
-    min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    font-family: "Helvetica";
+    font-family: "Verdana";
     align-content: center;
     
 }
@@ -44,4 +43,12 @@
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: #0281f8;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: bold;
 }

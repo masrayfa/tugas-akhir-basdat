@@ -1,9 +1,12 @@
 <?php
 
-if($_POST['pass'] == ""){
-    header('Location: data_penitipan.php');
+if($_POST['password'] == "admin"){
+    header('Location: read_data_penitipan_admin.php');
 } else {
-    echo "Password Salah!";
-    header('Location: pass_page.php');
+    echo "
+    <script type='text/javascript'>
+        alert('Passowrd salah.');
+        window.location.replace('../pages/passprotect_page.php')
+    </script>";
 }
 ?>
